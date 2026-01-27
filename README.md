@@ -8,8 +8,7 @@ My goal is to gain valuable experience points leaning the basics of Vue .. on th
 - Javasript 
 - HTML & CSS 
 
-## layout 
-
+## Project Structure
 side-quests/
 ├── sideQuests/
 │   ├── public/
