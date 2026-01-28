@@ -1,0 +1,71 @@
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Dark background -->
+  <rect width="400" height="400" fill="#0a0e17"/>  <!-- Glow definitions -->
+  <defs>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="1.4"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+<radialGradient id="portalGlow" cx="50%" cy="40%" r="65%" fx="50%" fy="40%">
+  <stop offset="0%" stop-color="#d4ffcc"/>
+  <stop offset="40%" stop-color="#98ff98"/>
+  <stop offset="70%" stop-color="#3fff7f"/>
+  <stop offset="100%" stop-color="#00e64d"/>
+</radialGradient>
+
+<linearGradient id="trailGradient" x1="0%" y1="100%" x2="100%" y2="0%">
+  <stop offset="0%" stop-color="#66ff99"/>
+  <stop offset="50%" stop-color="#33ff77"/>
+  <stop offset="100%" stop-color="#00cc44"/>
+</linearGradient>  </defs>
+
+  <!-- Outer circle with subtle glow -->
+  <circle cx="200" cy="200" r="165" fill="none" stroke="#1a3c2e" stroke-width="30" opacity="0.7"/>
+  <circle cx="200" cy="200" r="148" fill="none" stroke="#2e664d" stroke-width="18" opacity="0.6"/>
+
+  <!-- Portal inner glow / light -->
+  <circle cx="200" cy="140" r="70" fill="url(#portalGlow)" opacity="0.85" filter="url(#glow)"/>
+
+  <!-- Main trail / S shape with glow -->
+  <path 
+    d="M 280 280 
+       Q 240 340, 180 300 
+       Q 120 260, 140 200 
+       Q 160 140, 200 120 
+       Q 240 100, 260 140 
+       Q 280 180, 260 220 
+       L 240 260 
+       Q 220 300, 180 280 
+       Q 140 260, 160 220"
+    fill="none"
+    stroke="url(#trailGradient)"
+    stroke-width="38"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    filter="url(#glow)"
+  />  <!-- Brighter core highlight on the trail -->
+  <path 
+    d="M 280 280 
+       Q 240 340, 180 300 
+       Q 120 260, 140 200 
+       Q 160 140, 200 120 
+       Q 240 100, 260 140 
+       Q 280 180, 260 220 
+       L 240 260 
+       Q 220 300, 180 280 
+       Q 140 260, 160 220"
+    fill="none"
+    stroke="#ccffdd"
+    stroke-width="20"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    opacity="0.9"
+  /></svg>
+
