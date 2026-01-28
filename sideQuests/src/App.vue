@@ -32,7 +32,7 @@ import AppFooter from './components/AppFooter.vue';
   html, body {
   margin: 0;
   padding: 0;
-  height: 100%;
+  min-height: 100%;
   font-family: system-ui, Verdana, Geneva, Tahoma, sans-serif;
   }
 
@@ -55,8 +55,7 @@ import AppFooter from './components/AppFooter.vue';
   main {  
     flex: 1;
     width: 100%;
-    max-width: 1000px;
-    padding: 1rem; 
+    max-width: 1000px; 
   }
   
 </style>
