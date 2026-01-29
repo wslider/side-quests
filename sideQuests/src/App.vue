@@ -10,9 +10,10 @@ import AppFooter from './components/AppFooter.vue';
 <template>
 
 <div class="app-root" id="app-root">
-  <AppHeader />
 
   <AppNavbar />
+
+  <AppHeader />
 
   <main>
     <AppMain />
@@ -32,6 +33,8 @@ import AppFooter from './components/AppFooter.vue';
   margin: 0;
   padding: 0;
   min-height: 100%;
+  width: 100vw; 
+  max-width: 100vw;
   font-family: system-ui, Verdana, Geneva, Tahoma, sans-serif;
   }
 
@@ -50,6 +53,9 @@ import AppFooter from './components/AppFooter.vue';
     background-color: var(--background-dark-midnightBlue);
     color: var(--textColor-light-moonlitSnow);
     min-height: 100vh;
+    width: 100vw; 
+    max-width: 100vw;
+    margin: 0;
     display: flex;
     flex-direction: column;
     align-items: center;

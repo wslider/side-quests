@@ -15,7 +15,7 @@
       <section id="get-started">
         
       </section>
-      
+
     </div>
 </template>
 
@@ -25,6 +25,7 @@
     text-align: center;
     font-size: 1.2rem;
     margin-top: 2rem;
+    max-width: 100vw;
 }
 
 </style>

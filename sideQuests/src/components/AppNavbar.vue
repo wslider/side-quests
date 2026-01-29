@@ -56,15 +56,14 @@ function closeAndScroll(id) {
   position: sticky;
   top: 0;
   z-index: 1000;
-  width: 100%;
-  max-width: 1200px;
+  width: clamp(fit-content, 100%, 1200px);
+  box-sizing: border-box;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
   background-color: var(--background-dark-galaxyBlack);
-  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
   backdrop-filter: blur(8px);
   transition: padding 0.3s ease;
 }
@@ -133,7 +132,6 @@ function closeAndScroll(id) {
   border-radius: 8px;
   gap: 1.2rem;
   min-width: 180px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.5);
 }
 
 /* Responsive */

@@ -7,8 +7,6 @@
         src="@/assets/side-quests-logo.png"
         alt="Side Quests Portal Logo"
         class="logo"
-        width="160"
-        height="160"
       />
     </div>
 
@@ -20,8 +18,12 @@
 
 <style scoped>
 .hero {
-  text-align: center;
-  padding: 8rem 2rem 6rem;
+  width: clamp(300px, 80%, 800px);
+  padding: 8rem 2rem 4rem 2rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background: linear-gradient(to bottom, var(--background-dark-trasparentGalaxyBlack), transparent);
 }
 
@@ -36,14 +38,18 @@
 
 .logo {
   border-radius: 50%;
-  box-shadow: 0 0 40px rgba(102, 255, 153, 0.5);
+  width: clamp(150px, 50vw, 500px);
+  height: auto;
 }
 
 .blockquote {
   font-style: italic;
   color: var(--textColor-light-moonlitSnow);
   opacity: 0.9;
-  max-width: 800px;
+  width: clamp(300px, 80%, 600px);
+  height: auto;
+  text-align: center;
+  box-sizing: border-box;
   margin: 0 auto;
   font-size: 1.3rem;
 }
