@@ -1,6 +1,6 @@
 <script setup>
 
-import AppNav from './components/AppNav.vue';
+import AppNavbar from './components/AppNavbar.vue';
 import AppHeader from './components/AppHeader.vue';
 import AppMain from './components/AppMain.vue';
 import AppFooter from './components/AppFooter.vue';
@@ -10,10 +10,9 @@ import AppFooter from './components/AppFooter.vue';
 <template>
 
 <div class="app-root" id="app-root">
-
-  <AppNav />
-  
   <AppHeader />
+
+  <AppNavbar />
 
   <main>
     <AppMain />
@@ -39,7 +38,11 @@ import AppFooter from './components/AppFooter.vue';
 /* Root Variables */
   :root { 
     --background-dark-midnightBlue: #121b2b;
+    --background-dark-trasparentGalaxyBlack: #0d111780;
+    --background-dark-galaxyBlack: #0d1117;
     --textColor-light-moonlitSnow: #e1e6f0;
+    --textColor-light-siriusStarBlue: #c3d1e5;
+    --textColor-light-oldComputerGreen: #8bff8b;
   }
 
 /* Root wrapper */

@@ -3,7 +3,19 @@
 
 <template>
     <div class="app-main">
-        <p>Welcome to Side Quests! Your adventure starts here.</p>
+
+      <section id="home">
+         
+      </section>
+
+      <section id="about">
+       
+      </section>
+
+      <section id="get-started">
+        
+      </section>
+      
     </div>
 </template>
 
