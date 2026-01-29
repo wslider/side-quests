@@ -56,9 +56,11 @@ function closeAndScroll(id) {
   position: sticky;
   top: 0;
   z-index: 1000;
-  width: clamp(fit-content, 100%, 1200px);
+  width: 100%;
+  max-width: 100vw;
+  min-height: fit-content; 
   box-sizing: border-box;
-  margin: 0 auto;
+  margin: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -66,10 +68,6 @@ function closeAndScroll(id) {
   background-color: var(--background-dark-galaxyBlack);
   backdrop-filter: blur(8px);
   transition: padding 0.3s ease;
-}
-
-.app-navbar.scrolled {
-  padding: 0.75rem 2rem;
 }
 
 .nav-logo img {
