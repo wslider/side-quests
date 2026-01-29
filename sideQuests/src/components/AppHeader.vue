@@ -30,6 +30,7 @@
 .hero h1 {
   font-size: 4rem;
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 .logo-container {
