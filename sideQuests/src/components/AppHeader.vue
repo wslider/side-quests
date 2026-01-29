@@ -46,11 +46,12 @@
   font-style: italic;
   color: var(--textColor-light-moonlitSnow);
   opacity: 0.9;
-  width: clamp(300px, 80%, 600px);
+  width: 80vw; 
+  max-width: 800px;
   height: auto;
   text-align: center;
   box-sizing: border-box;
-  margin: 0 auto;
-  font-size: 1.3rem;
+  margin: 0;
+  font-size: 1rem;
 }
 </style>

@@ -18,7 +18,6 @@ function closeAndScroll(id) {
 
 <template>
   <nav class="app-navbar">
-    <!-- Small logo left -->
     <div class="nav-logo">
       <img
         src="@/assets/side-quests-logo.png"
@@ -57,10 +56,6 @@ function closeAndScroll(id) {
   top: 0;
   z-index: 1000;
   width: 100%;
-  max-width: 100vw;
-  min-height: fit-content; 
-  box-sizing: border-box;
-  margin: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -70,11 +65,13 @@ function closeAndScroll(id) {
   transition: padding 0.3s ease;
 }
 
+/* Small logo */
 .nav-logo img {
   border-radius: 50%;
   object-fit: cover;
 }
 
+/* Links */
 .nav-links {
   list-style: none;
   margin: 0;
@@ -94,7 +91,7 @@ function closeAndScroll(id) {
   color: var(--textColor-light-oldComputerGreen);
 }
 
-/* Hamburger styles (copy from your previous) */
+/* Hamburger */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -130,11 +127,16 @@ function closeAndScroll(id) {
   border-radius: 8px;
   gap: 1.2rem;
   min-width: 180px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.5);
 }
 
 /* Responsive */
 @media only screen and (max-width: 768px) {
-  .desktop { display: none; }
-  .hamburger { display: flex; }
+  .desktop {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+  }
 }
 </style>
