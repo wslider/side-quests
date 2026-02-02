@@ -60,7 +60,7 @@ function generateQuest() {
 
   alert(msg)
 
-  const url = `https://www.openstreetmap.org/#map=14/${questLat}/${questLon}`
+  const url = `https://www.openstreetmap.org/#map=19/${questLat}/${questLon}`
   window.open(url, '_blank')
 }
 </script>
@@ -112,6 +112,15 @@ function generateQuest() {
   flex-direction: column;
   gap: 1rem;
   align-items: center;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem; 
 }
 
 input {
