@@ -57,6 +57,7 @@ function generateQuest() {
 
   const msg = `Opening map to a random quest ~${miles} miles away!\n\n` +
               `Remember: only explore safe/public areas, respect private property & laws.`
+              `Difficulty Level: {miles <= 5 ? 'EASY' : miles <= 20 ? 'MEDIUM' : 'HARD'}`
 
   alert(msg)
 
@@ -100,6 +101,36 @@ function generateQuest() {
 
         <button @click="generateQuest">Find Quest!</button>
       </div>
+    </section>
+
+    <section id="uploadSideQuests" class="section container">
+        <form> 
+            <h2>Upload Your Own Side Quest</h2>
+            <p>Share your favorite hidden gems and micro-adventures with the community! Submit your own side quests by filling out the form below. Please include a title, description, location (address or coordinates), and any tips or photos you'd like to share.</p>
+    
+            <label>
+                Title:
+                <input type="text" name="title" required>
+            </label>
+    
+            <label>
+                Description:
+                <textarea name="description" rows="4" required></textarea>
+            </label>
+    
+            <label>
+                Location (address or coordinates):
+                <input type="text" name="location" required>
+            </label>
+    
+            <label>
+                Tips/Photos (optional):
+                <textarea name="tips" rows="3"></textarea>
+            </label>
+    
+            <button type="submit" id="submitQuestButton">Submit Quest</button>
+        </form>
+    
     </section>
   </div>
 </template>

@@ -4,22 +4,27 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueDevTools from 'vite-plugin-vue-devtools'
 
-
-
 export default defineConfig({
-  base: '/side-quests/',  // ← repo name for GitHub Pages deployment 
+  base: '/side-quests/',  // keep for GitHub Pages
 
   plugins: [
     vue(),
     vueDevTools(),
   ],
+
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
-  },
-})
+  }, 
 
-/* Refferences Vue and Vite config:
-- https://vuejs.org/guide/scaling-up/tooling.html#vite
--  https://vitejs.dev/config/ */
+  server: {
+    proxy: {
+      '/api': {
+        target: 'http://localhost:4000',
+        changeOrigin: true,
+        secure: false
+      }
+    }
+  }
+})
