@@ -1,0 +1,38 @@
+# Node / npm
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Vite / Vue build outputs
+dist/
+dist-ssr/
+*.local
+
+# Env / secrets
+.env
+.env.local
+.env.*.local
+
+# Editor / OS files
+.DS_Store
+Thumbs.db
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Logs / temp
+*.log
+tmp/
+temp/
+
+# IDE / editor folders
+.idea/
+.vscode/
+*.code-workspace
+
+# Optional: ignore test coverage, etc.
+coverage/
