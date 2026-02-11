@@ -2,37 +2,16 @@
     {
         "id": 1,
         "name": "Highest Point within 1 Mile",
-        "description": "Find the highest legally accessable point within a 1 mile radius of your current location.",
-        "latitude": 38.2248,
-        "longitude": -85.6088,
-        "difficulty": "Easy",
-        "reward": "100 XP",
-        "createdAt": "2024-06-01T12:00:00Z",
-        "updatedAt": "2024-06-01T12:00:00Z",
-        "isActive": true, 
-        "completedBy": {
-            "userId": null,
-            "username": null,
-            "completedAt": null
-        },
-        "submittedBy": "admin"
+        "description": "Find the highest point within a 1 mile radius of your current location and take a photo."
     },
     {
         "id": 2, 
         "name": "Hidden Passageway", 
-        "description": "Discover a hidden passageway or alley within a 2 mile radius of your current location.",
-        "latitude": 38.2248,
-        "longitude": -85.6088,
-        "difficulty": "Medium",
-        "reward": "200 XP",
-        "createdAt": "2024-06-01T12:00:00Z",
-        "updatedAt": "2024-06-01T12:00:00Z",
-        "isActive": true,
-        "completedBy": {
-            "userId": null,
-            "username": null,
-            "completedAt": null
-        },
-        "submittedBy": "admin"
+        "description": "Discover a hidden passageway or alley within a 2 mile radius of your current location." 
+    },
+    {
+        "id": 3, 
+        "name": "Follow the Stream", 
+        "description": "Find a stream or river within a 3 mile radius and follow it for at least 1 mile" 
     }
 ]

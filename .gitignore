@@ -36,3 +36,6 @@ temp/
 
 # Optional: ignore test coverage, etc.
 coverage/
+
+# Optional: ignore notes or documentation files
+notes.md

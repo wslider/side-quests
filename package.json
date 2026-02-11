@@ -1,5 +1,6 @@
 {
   "name": "side-quests-fullstack",
+  "type": "module",
   "private": true,
   "scripts": {
     "dev": "concurrently \"cd sideQuests && npm run dev\" \"cd server && npm run dev\"",
@@ -10,5 +11,11 @@
   },
   "devDependencies": {
     "concurrently": "^8.2.2"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.2.4",
+    "express": "^5.2.1",
+    "nodemon": "^3.1.11"
   }
 }

@@ -83,10 +83,22 @@ function generateQuest() {
       <p>{{ status }}</p>
 
       <button v-if="!showForm" id="get-started-button">
-        Get Started
+        Get Started 
       </button>
 
       <div v-if="showForm" class="quest-form">
+
+        <label>
+          Get A Side Quest:
+          <div class="questCard" id="questCard">
+            <h3 id="questTitle"></h3>
+            <p id="questDescription"></p>
+          </div>
+          <button @click="generateQuest">
+            Generate Quest
+          </button>
+        </label>
+        
         <label>
           Distance from your location:
           <input
