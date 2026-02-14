@@ -1,11 +1,32 @@
-<script>
+<script setup>
+import { computed } from 'vue'
+
+const props = defineProps({
+  date: {
+    type: [String, Date, Number],
+    default: () => new Date()
+  }
+})
+
+const titleDate = computed(() => {
+  return new Date(props.date).toLocaleString('en-US', {
+    month: 'long',
+    day: 'numeric',
+    year: 'numeric'
+  })
+})
+
+
 </script>
 
 <template>
   <footer class="app-footer">
+    <time :title="titleDate" :datetime="new Date(date).toISOString()">
+      {{ titleDate }}
+    </time>
     <p>© 2026 Side Quests. All rights reserved (at least for now).</p>
     <p>Developed by William Slider.</p>
-    </footer>
+  </footer>
 </template>
 
 <style scoped>
