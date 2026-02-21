@@ -1,17 +1,29 @@
 [
     {
         "id": 1,
-        "name": "Highest Point within 1 Mile",
-        "description": "Find the highest point within a 1 mile radius of your current location and take a photo."
+        "title": "Highest Point within 1/2 Mile",
+        "difficulty": "Easy",
+        "location": "", 
+        "description": "Find the highest point within a 1 mile radius of your current location and take a photo.",
+        "notes": "",
+        "xp": 100
     },
     {
         "id": 2, 
-        "name": "Hidden Passageway", 
-        "description": "Discover a hidden passageway or alley within a 2 mile radius of your current location." 
+        "title": "Hidden Passageway",
+        "difficulty": "Hard",
+        "location": "",
+        "description": "Discover a hidden passageway or alley within a 2 mile radius of your current location.",
+        "notes": "",
+        "xp": 200 
     },
     {
         "id": 3, 
-        "name": "Follow the Stream", 
-        "description": "Find a stream or river within a 3 mile radius and follow it for at least 1 mile" 
+        "title": "Follow the Stream",
+        "difficulty": "Medium",
+        "location": "", 
+        "description": "Find a stream or river within a 3 mile radius and follow it for at least 1 mile",
+        "notes": "",
+        "xp": 150 
     }
 ]
