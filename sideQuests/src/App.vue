@@ -1,8 +1,7 @@
 <script setup>
-
+import { RouterLink, RouterView } from 'vue-router';
 import AppNavbar from './components/AppNavbar.vue';
 import AppHeader from './components/AppHeader.vue';
-import AppMain from './components/AppMain.vue';
 import AppFooter from './components/AppFooter.vue';
 
 </script>
@@ -15,10 +14,18 @@ import AppFooter from './components/AppFooter.vue';
 
   <AppHeader />
 
-  <main>
-    <AppMain />
-  </main>
-  
+   <main class="app-main">
+
+      <RouterView />
+
+      <div class ="routerQuestButtons">
+        <button class="button" id="viewQuest"></button>
+        <button class="button" id="submitQuest"></button>
+        <button class="button" id="locationQuest"></button>
+      </div>
+
+
+    </main>
 
   <AppFooter />
 
@@ -61,10 +68,13 @@ import AppFooter from './components/AppFooter.vue';
     align-items: center;
   }
 
-  main {  
-    flex: 1;
-    width: 100%;
-    max-width: 1000px; 
-  }
+  .app-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 2rem 0;
+  box-sizing: border-box;
+}
   
 </style>

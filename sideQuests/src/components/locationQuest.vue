@@ -1,0 +1,95 @@
+    <template>
+    <section id="get-started" class="section container questSection">
+      <h2>Find a random side quest near you</h2>
+
+      <p>{{ status }}</p>
+
+      <button v-if="!showForm" id="get-started-button">
+        Get Started 
+      </button>
+
+      <div v-if="showForm" class="quest-form">
+
+        <label>
+          Get A Side Quest:
+          <div class="questCard" id="questCard">
+            <h3 id="questTitle"></h3>
+            <p id="questDescription"></p>
+          </div>
+          <button @click="generateQuest" class="button" id="generateQuestButton">
+            Generate Quest
+          </button>
+        </label>
+
+        
+      </div>
+    </section>
+    </template>
+<script setup>
+import { onMounted, ref } from 'vue'
+
+const status = ref('Click to begin')
+const showForm = ref(false)
+const distance = ref(10)
+
+let userLat = null
+let userLon = null
+onMounted(() => {
+  const btn = document.getElementById('get-started-button')
+  btn.addEventListener('click', () => {
+    if (!navigator.geolocation) {
+      status.value = "Geolocation is not supported by your browser"
+      return
+    }
+
+    status.value = "Locating..."
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        userLat = position.coords.latitude 
+        userLon = position.coords.longitude
+        console.log(`User: ${userLat}, ${userLon}`)
+        showForm.value = true
+        status.value = "How far would you like to travel?"
+        },
+        () => {
+          status.value = "Unable to retrieve your location"
+        }
+    )
+  });
+})
+
+function generateQuest() {
+  if (!userLat || !userLon) return
+
+  const miles = Number(distance.value)
+  if (!miles || miles < 1) {
+    alert("Please enter a valid distance (1–100 miles)")
+    return
+  }
+
+  // Much better approximation for random point in circle
+  const radiusDegrees = miles / 69           // rough lat scale
+  const randomAngle = Math.random() * 2 * Math.PI
+  const randomRadius = Math.random() * radiusDegrees   // uniform in disk
+
+  const questLat = userLat + randomRadius * Math.cos(randomAngle)
+  const questLon = userLon + randomRadius * Math.sin(randomAngle) * Math.cos(userLat * Math.PI / 180) // crude longitude correction
+
+  console.log(`Quest @ ${questLat.toFixed(5)}, ${questLon.toFixed(5)}`)
+
+  const msg = `Opening map to a random quest ~${miles} miles away!\n\n` +
+              `Remember: only explore safe/public areas, respect private property & laws.`
+              `Difficulty Level: {miles <= 5 ? 'EASY' : miles <= 20 ? 'MEDIUM' : 'HARD'}`
+
+  alert(msg)
+
+  const url = `https://www.openstreetmap.org/#map=19/${questLat}/${questLon}`
+  window.open(url, '_blank')
+}
+
+//fututre: prepopulate quest cards with info (including loccation and distance from location) and blank fields for user to fill out. )
+</script>
+<style scoped>
+</style>
+
+

@@ -41,4 +41,11 @@
 <script setup></script>
 
 <style scoped>
+.quest-card {
+  background-color: var(--background-dark-trasparentGalaxyBlack);
+  border: 1px solid var(--textColor-light-moonlitSnow);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
 </style>
